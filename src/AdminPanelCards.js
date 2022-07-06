@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
-import { Card, Button, Form, Row, Col, Container } from "react-bootstrap";
+import { Card, Button, Form, Row, Col, Container, Modal } from "react-bootstrap";
 import Axios from 'axios'
 
 
 
 
 function AdminPanelCards() {
+
+  const [gotData, setGotData] = useState(true)
+
+  const [savedId, setSavedId] = useState(null)
 
 
 
@@ -306,12 +310,17 @@ function AdminPanelCards() {
   
   Axios.get('https://digiaccel-alihaiderkhan.herokuapp.com//read').then((response)=>{
     console.log(response.data.slice(-1)[0]._id)
-    var savedId = response.data.slice(-1)[0]._id
+    var justGotId = response.data.slice(-1)[0]._id
+    setGotData(true)
     alert("Quiz Saved Succesfully! Save task id: " + savedId )
+    setSavedId(justGotId)
   })
+
+ 
 
     
   };
+  const handleClose = () => setGotData(false);
 
   return (
     <>
@@ -1183,6 +1192,19 @@ function AdminPanelCards() {
           </Button>
         </div>
       </Container>
+
+      {gotData?<Modal show={gotData} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Quiz Submitted!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Quiz Saved Succesfully! Save task id:  {savedId} !</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+
+        </Modal.Footer>
+      </Modal>:null}
     </>
   );
 }

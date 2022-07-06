@@ -145,6 +145,8 @@ function UserPanelCarousel() {
                 <Card.Title>Enter Quiz ID</Card.Title>
                 <Card.Text>
                   Enter the quiz id to start your quiz
+                  
+                  <small>(Try this ID: 62c5a7bbc88f184790058cc5)</small>
                   <Form.Control
                     type="email"
                     placeholder="Enter ID here"
