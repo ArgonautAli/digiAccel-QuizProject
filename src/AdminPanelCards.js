@@ -201,7 +201,7 @@ function AdminPanelCards() {
   // }
 
   const addQuiz = () => {
-    Axios.post("http://localhost:3001/insert", {quizDat: [
+    Axios.post("https://digiaccel-alihaiderkhan.herokuapp.com/insert", {quizDat: [
       {
       question: ques1,
       optionA: optA1,
@@ -304,7 +304,7 @@ function AdminPanelCards() {
   
   ]});
   
-  Axios.get('https://digiaccel-alihaiderkhan.herokuapp.com/read').then((response)=>{
+  Axios.get('https://digiaccel-alihaiderkhan.herokuapp.com//read').then((response)=>{
     console.log(response.data.slice(-1)[0]._id)
     var savedId = response.data.slice(-1)[0]._id
     alert("Quiz Saved Succesfully! Save task id: " + savedId )
