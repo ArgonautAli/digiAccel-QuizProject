@@ -1,38 +1,71 @@
-.App {
+.admin {
+  height: 100%;
+  background-color: #ff8e00;
+  display: flex;
+  align-items: center;
+
+}
+
+
+.user {
+  height: 100%;
+  background-color: #003f7d;
+  display: flex;
+  align-items: center;
+}
+
+.navi {
+  background-color: #fdfcf3;
+}
+
+.apPage {
+  height: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.apCard {
+  text-align: left;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+  1px 3px 8px rgba(39, 44, 49, 0.03);
+transition: all 0.5s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.apCard:hover {
+  transform: translate3D(0,-1px,0) scale(1.03);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.adCard {
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+  1px 3px 8px rgba(39, 44, 49, 0.03);
+transition: all 0.5s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.adCard:hover {
+  transform: translate3D(0,-1px,0) scale(1.03);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.usCard {
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+  1px 3px 8px rgba(39, 44, 49, 0.03);
+transition: all 0.5s ease;
 }
+
+.usCard:hover {
+  transform: translate3D(0,-1px,0) scale(1.03);
+}
+
+.uspCard {
+  text-align: left;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+  1px 3px 8px rgba(39, 44, 49, 0.03);
+transition: all 0.5s ease;
+}
+
+.uspCard:hover {
+  transform: translate3D(0,-1px,0) scale(1.03);
+}
+
+
+
+
+

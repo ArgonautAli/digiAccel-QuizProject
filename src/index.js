@@ -1,13 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import "./index.css";
+import App from "./App";
+import AdminPanel from "./AdminPanel";
+import UserPanel from "./UserPanel";
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        
+        <Route exact path="/" element={<App />}/>
+        <Route exact path="/adminpanel" element={<AdminPanel/>}/>
+        <Route exact path="/userpanel" element={<UserPanel/>}/>
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
