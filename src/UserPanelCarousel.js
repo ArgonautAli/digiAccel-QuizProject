@@ -35,7 +35,7 @@ function UserPanelCarousel() {
     
     console.log(testBeg)
     console.log(testId)
-    Axios.get("http://localhost:3001/read").then((response) => {
+    Axios.get("https://digiaccel-alihaiderkhan.herokuapp.com/read").then((response) => {
       setTestBeg(true)
       console.log(response.data);
       setDisplayData(response.data);

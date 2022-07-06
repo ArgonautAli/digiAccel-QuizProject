@@ -304,7 +304,7 @@ function AdminPanelCards() {
   
   ]});
   
-  Axios.get('http://localhost:3001/read').then((response)=>{
+  Axios.get('https://digiaccel-alihaiderkhan.herokuapp.com/read').then((response)=>{
     console.log(response.data.slice(-1)[0]._id)
     var savedId = response.data.slice(-1)[0]._id
     alert("Quiz Saved Succesfully! Save task id: " + savedId )
