@@ -7,7 +7,7 @@ import Axios from 'axios'
 
 function AdminPanelCards() {
 
-  const [gotData, setGotData] = useState(true)
+  const [gotData, setGotData] = useState(false)
 
   const [savedId, setSavedId] = useState(null)
 
