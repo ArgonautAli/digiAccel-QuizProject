@@ -84,16 +84,16 @@ function UserPanelCarousel() {
 
     function newQues(){
       
-      setDisplayQues(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == 4)[0].question)
-      setDisplayDiff(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == 4)[0].difficultyLevel)
+      setDisplayQues(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == newDiff)[0].question)
+      setDisplayDiff(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == newDiff)[0].difficultyLevel)
 
-      setDisplayOptA(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == 4)[0].optionA)
-      setDisplayOptB(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == 4)[0].optionB)
-      setDisplayOptC(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == 4)[0].optionC)
-      setDisplayOptD(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == 4)[0].optionD)
+      setDisplayOptA(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == newDiff)[0].optionA)
+      setDisplayOptB(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == newDiff)[0].optionB)
+      setDisplayOptC(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == newDiff)[0].optionC)
+      setDisplayOptD(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == newDiff)[0].optionD)
 
-      setDisplayCorrOpt1(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == 4)[0].correctOption)
-      setDisplayCorrOpt2(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == 4)[0].secondCorrectOption)
+      setDisplayCorrOpt1(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == newDiff)[0].correctOption)
+      setDisplayCorrOpt2(displayData.filter((obj) => obj._id == testId)[0].quizQuestions.filter((dif) => dif.difficultyLevel == newDiff)[0].secondCorrectOption)
 
       console.log("time for new ques")
       console.log(displayQues)
