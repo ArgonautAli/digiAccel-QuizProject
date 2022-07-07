@@ -308,7 +308,7 @@ function AdminPanelCards() {
   
   ]});
   
-  Axios.get('https://digiaccel-alihaiderkhan.herokuapp.com//read').then((response)=>{
+  Axios.get('https://digiaccel-alihaiderkhan.herokuapp.com/read').then((response)=>{
     console.log(response.data.slice(-1)[0]._id)
     var justGotId = response.data.slice(-1)[0]._id
     setGotData(true)
